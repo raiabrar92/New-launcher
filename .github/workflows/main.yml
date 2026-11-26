@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Unpack project
-        run: ls -la && unzip -q "$(ls tvhome-launcher-v1.5*.zip | head -n 1)"
+        run: unzip -q tvhome-launcher.zip && grep versionName tvhome-launcher/app/build.gradle.kts
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
