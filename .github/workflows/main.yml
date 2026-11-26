@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Unpack project
-        run: unzip -q tvhome-launcher-v1.5.zip
+        run: ls -la && unzip -q "$(ls tvhome-launcher-v1.5*.zip | head -n 1)"
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
