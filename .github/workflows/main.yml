@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Unpack project
         run: |
-          unzip -q tvhome-launcher-v1.5.zip
+          unzip -q tvhome-launcher.zip
           grep versionName tvhome-launcher/app/build.gradle.kts
       - uses: actions/setup-java@v4
         with:
